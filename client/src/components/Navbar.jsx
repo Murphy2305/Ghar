@@ -11,7 +11,7 @@ import { setLogout } from "../redux/state";
 
 const Navbar = () => {
 
-  let URL = 'http://localhost:3001/';
+let URL = 'https://ghar-backend.onrender.com/';
 
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
