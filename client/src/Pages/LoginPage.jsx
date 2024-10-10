@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
 const LoginPage = () => {
-  let URL = 'http://localhost:3001/';
+let URL = 'https://ghar-backend.onrender.com/';
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
