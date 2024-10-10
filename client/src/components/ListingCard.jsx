@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setWishList } from '../redux/state';
 import { Favorite } from '@mui/icons-material';
 
-let URL = 'http://localhost:3001/';
+let URL = 'https://ghar-backend.onrender.com/';
 
 
 const ListingCard = ({
