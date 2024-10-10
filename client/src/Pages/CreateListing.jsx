@@ -11,6 +11,9 @@ import { useNavigate } from "react-router-dom";
 import Footer from '../components/Footer';
 
 const CreateListing = () => {
+
+  let URL = 'http://localhost:3001/';
+
   const [category, setCategory] = useState("");
   const [type, setType] = useState("");
 
@@ -140,7 +143,7 @@ const CreateListing = () => {
       });
 
       /* Send a POST request to server */
-      const response = await fetch("http://localhost:3001/properties/create", {
+      const response = await fetch(`${URL}properties/create`, {
         method: "POST",
         body: listingForm,
       });

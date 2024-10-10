@@ -10,6 +10,9 @@ import { setLogout } from "../redux/state";
 
 
 const Navbar = () => {
+
+  let URL = 'http://localhost:3001/';
+
   const [dropdownMenu, setDropdownMenu] = useState(false);
 
   const user = useSelector((state) => state.user);
@@ -60,7 +63,7 @@ const Navbar = () => {
           {!user ? (
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
-            <img src={`http://localhost:3001/${user.profileImagePath.replace("public","")}`} alt="profile photo" style={{ objectFit: "cover", borderRadius: "50%" }}
+            <img src={`${URL}${user.profileImagePath.replace("public","")}`} alt="profile photo" style={{ objectFit: "cover", borderRadius: "50%" }}
             />
           )}
         </button>

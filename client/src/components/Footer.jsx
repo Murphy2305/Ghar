@@ -1,5 +1,5 @@
 import "../Pages/styles/Footer.css"
-import { LocationOn, LocalPhone, Email } from "@mui/icons-material"
+import { LocalPhone, Email } from "@mui/icons-material"
 const Footer = () => {
   return (
     <>

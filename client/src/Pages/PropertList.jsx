@@ -8,6 +8,8 @@ import Loader from "../components/Loader";
 import Footer from "../components/Footer"
 
 const PropertyList = () => {
+  let URL = 'http://localhost:3001/';
+
   const [loading, setLoading] = useState(true)
   const user = useSelector((state) => state.user)
   const propertyList = user?.propertyList;
@@ -16,7 +18,7 @@ const PropertyList = () => {
   const dispatch = useDispatch()
   const getPropertyList = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/users/${user._id}/properties`, {
+      const response = await fetch(`${URL}users/${user._id}/properties`, {
         method: "GET"
       })
       const data = await response.json()

@@ -9,6 +9,8 @@ import ListingCard from "../components/ListingCard";
 import Footer from "../components/Footer"
 
 const CategoryPage = () => {
+  let URL = 'http://localhost:3001/';
+
   const [loading, setLoading] = useState(true);
   const { category } = useParams()
 
@@ -18,7 +20,7 @@ const CategoryPage = () => {
   const getFeedListings = async () => {
     try {
       const response = await fetch(
-          `http://localhost:3001/properties?category=${category}`,
+          `${URL}properties?category=${category}`,
         {
           method: "GET",
         }

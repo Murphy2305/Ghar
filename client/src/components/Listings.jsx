@@ -6,6 +6,8 @@ import Loader from './Loader'
 import ListingCard from './ListingCard' 
 import {setListings} from '../redux/state'
 const Listings = () => {
+    let URL = 'http://localhost:3001/';
+
 
     const dispatch = useDispatch();
     const [loading,setLoading] = useState(true);
@@ -19,9 +21,9 @@ const Listings = () => {
             
             const response = await fetch(
                 selectCategory!=='All' ?
-                `http://localhost:3001/properties?category=${selectCategory}`
+                `${URL}properties?category=${selectCategory}`
                 :
-                "http://localhost:3001/properties"
+                `${URL}properties`
                 ,{
                     method: 'GET',
                 }

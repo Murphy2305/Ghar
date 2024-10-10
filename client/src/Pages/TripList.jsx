@@ -8,6 +8,9 @@ import ListingCard from '../components/ListingCard';
 import Footer from '../components/Footer';
 
 const TripList = () => {
+
+  let URL = 'http://localhost:3001/';
+
   const [loading, setLoading] = useState(true);
 
   const userId = useSelector((state) => state.user._id); 
@@ -16,7 +19,7 @@ const TripList = () => {
 
   const getTripList = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/users/${userId}/trips`, {
+      const response = await fetch(`${URL}users/${userId}/trips`, {
         method: 'GET',
       });
 

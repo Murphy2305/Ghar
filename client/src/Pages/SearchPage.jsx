@@ -9,6 +9,8 @@ import ListingCard from "../components/ListingCard";
 import Footer from "../components/Footer"
 
 const SearchPage = () => {
+  let URL = 'http://localhost:3001/';
+
   const [loading, setLoading] = useState(true)
   const { search } = useParams()
   const listings = useSelector((state) => state.listings)
@@ -17,7 +19,7 @@ const SearchPage = () => {
 
   const getSearchListings = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/properties/search/${search}`, {
+      const response = await fetch(`${URL}properties/search/${search}`, {
         method: "GET"
       })
 

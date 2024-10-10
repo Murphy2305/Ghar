@@ -8,6 +8,8 @@ import ListingCard from "../components/ListingCard";
 import Footer from "../components/Footer"
 
 const ReservationList = () => {
+  let URL = 'http://localhost:3001/';
+
   const [loading, setLoading] = useState(true);
   const userId = useSelector((state) => state.user._id);
   const reservationList = useSelector((state) => state.user.reservationList);
@@ -17,7 +19,7 @@ const ReservationList = () => {
   const getReservationList = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${userId}/reservations`,
+        `${URL}users/${userId}/reservations`,
         {
           method: "GET",
         }
