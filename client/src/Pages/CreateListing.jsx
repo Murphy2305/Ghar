@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 
 const CreateListing = () => {
 
-  let URL = 'http://localhost:3001/';
+let URL = 'https://ghar-backend.onrender.com/';
 
   const [category, setCategory] = useState("");
   const [type, setType] = useState("");
