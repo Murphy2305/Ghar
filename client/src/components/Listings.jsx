@@ -6,7 +6,7 @@ import Loader from './Loader'
 import ListingCard from './ListingCard' 
 import {setListings} from '../redux/state'
 const Listings = () => {
-    let URL = 'http://localhost:3001/';
+let URL = 'https://ghar-backend.onrender.com/';
 
 
     const dispatch = useDispatch();
