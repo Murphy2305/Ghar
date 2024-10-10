@@ -9,7 +9,7 @@ import ListingCard from "../components/ListingCard";
 import Footer from "../components/Footer"
 
 const SearchPage = () => {
-  let URL = 'http://localhost:3001/';
+let URL = 'https://ghar-backend.onrender.com/';
 
   const [loading, setLoading] = useState(true)
   const { search } = useParams()
