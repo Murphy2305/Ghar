@@ -4,7 +4,7 @@ import '../Pages/styles/register.css';
 
 const RegisterPage = () => {
 
-  let URL = 'http://localhost:3001/';
+let URL = 'https://ghar-backend.onrender.com/';
 
   const [formData, setFormData] = useState({
     firstName: "",
