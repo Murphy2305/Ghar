@@ -21,7 +21,7 @@ const ListingDetails = () => {
   const getListingDetails = async () => {
     try {
       const response = await fetch(
-        `/api/${listingId}`,
+        `/api/properties/${listingId}`,
         {
           method: "GET",
         }
