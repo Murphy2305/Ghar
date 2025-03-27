@@ -14,7 +14,9 @@ app.use(cors()); // Corrected by calling cors() as a function (important to call
 app.use(express.json()); 
 app.use(express.static('public'));
 
-
+app.get('/',(req,res)=>{
+    res.send("Service running");
+})
 
 app.use("/auth", authRoutes);
 app.use("/properties", listingRoutes);
