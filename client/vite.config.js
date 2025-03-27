@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:3001', // Replace with your backend URL
+        target: 'https://ghar-25gb.onrender.com', // Replace with your backend URL
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''), // Adjust based on backend API route
       },
